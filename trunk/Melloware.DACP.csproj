@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C6912CC7-B76A-48AA-935C-1F310E0C3568}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Melloware.DACP</RootNamespace>
+    <AssemblyName>Melloware.DACP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Melloware\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>.\lib\keyfile.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Melloware.DACP.XmlSerializers">
+      <HintPath>lib\Melloware.DACP.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ZeroconfService">
+      <HintPath>lib\ZeroconfService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Melloware.Core\CountdownLatch.cs" />
+    <Compile Include="Melloware.Core\Endian.cs" />
+    <Compile Include="Melloware.Core\LRUCache.cs" />
+    <Compile Include="Melloware.Core\RWLock.cs" />
+    <Compile Include="Melloware.Core\SerializableDictionary.cs" />
+    <Compile Include="Melloware.DACP\AlbumNode.cs" />
+    <Compile Include="Melloware.DACP\AlbumsResponse.cs" />
+    <Compile Include="Melloware.DACP\ArtistNode.cs" />
+    <Compile Include="Melloware.DACP\ArtistsResponse.cs" />
+    <Compile Include="Melloware.DACP\ArtworkCache.cs" />
+    <Compile Include="Melloware.DACP\ArtworkResponse.cs" />
+    <Compile Include="Melloware.DACP\BaseNode.cs" />
+    <Compile Include="Melloware.DACP\BrowseResponse.cs" />
+    <Compile Include="Melloware.DACP\CtrlIntNode.cs" />
+    <Compile Include="Melloware.DACP\CtrlIntResponse.cs" />
+    <Compile Include="Melloware.DACP\DACPPairingClient.cs" />
+    <Compile Include="Melloware.DACP\DACPPairingDatabase.cs" />
+    <Compile Include="Melloware.DACP\DACPPairingException.cs" />
+    <Compile Include="Melloware.DACP\DACPPairingForm.cs" />
+    <Compile Include="Melloware.DACP\DACPPairingForm.Designer.cs">
+      <DependentUpon>DACPPairingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Melloware.DACP\DACPPairingServer.cs" />
+    <Compile Include="Melloware.DACP\DACPResponse.cs" />
+    <Compile Include="Melloware.DACP\DACPSecurityException.cs" />
+    <Compile Include="Melloware.DACP\DACPServer.cs" />
+    <Compile Include="Melloware.DACP\DatabaseResponse.cs" />
+    <Compile Include="Melloware.DACP\EditNode.cs" />
+    <Compile Include="Melloware.DACP\EditResponse.cs" />
+    <Compile Include="Melloware.DACP\DACPBonjourException.cs" />
+    <Compile Include="Melloware.DACP\FairPlayResponse.cs" />
+    <Compile Include="Melloware.DACP\IErrorResponse.cs" />
+    <Compile Include="Melloware.DACP\IndexNode.cs" />
+    <Compile Include="Melloware.DACP\INoContentResponse.cs" />
+    <Compile Include="Melloware.DACP\LoginResponse.cs" />
+    <Compile Include="Melloware.DACP\LogoutResponse.cs" />
+    <Compile Include="Melloware.DACP\PairingClientResponse.cs" />
+    <Compile Include="Melloware.DACP\PairingReply.cs" />
+    <Compile Include="Melloware.DACP\PlayerStatusUpdateResponse.cs" />
+    <Compile Include="Melloware.DACP\PlaylistNode.cs" />
+    <Compile Include="Melloware.DACP\PlaylistsResponse.cs" />
+    <Compile Include="Melloware.DACP\PropertyResponse.cs" />
+    <Compile Include="Melloware.DACP\ServerInfoResponse.cs" />
+    <Compile Include="Melloware.DACP\SessionBoundResponse.cs" />
+    <Compile Include="Melloware.DACP\SessionInfo.cs" />
+    <Compile Include="Melloware.DACP\SpeakerNode.cs" />
+    <Compile Include="Melloware.DACP\SpeakerResponse.cs" />
+    <Compile Include="Melloware.DACP\TrackNode.cs" />
+    <Compile Include="Melloware.DACP\TracksResponse.cs" />
+    <Compile Include="Melloware.DACP\UpdateResponse.cs" />
+    <Compile Include="Melloware.DACP\VolumeResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Melloware.DACP\DACPPairingForm.resx">
+      <DependentUpon>DACPPairingForm.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Melloware.Core" />
+    <Folder Include="Melloware.DACP" />
+  </ItemGroup>
+</Project>
