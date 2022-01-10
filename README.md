@@ -1,4 +1,6 @@
-# dacp-net
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# DACP.NET
 DACP.NET is an open source library for handling the complexities of Apple's DACP Protocol
 
 DACP.NET is an open source library for handling the server-side complexities of Apple's DACP Protocol. DACP helps you remote control your desktop or laptop media player from any DACP Client:
